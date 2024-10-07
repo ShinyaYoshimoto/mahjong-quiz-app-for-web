@@ -32,9 +32,6 @@ const headingStyles = {
   marginBottom: 64,
   maxWidth: 320,
 }
-const headingAccentStyles = {
-  color: "#663399",
-}
 
 const SummaryPage = ({ data }: { data: Data }) => {
   const answers = data.allRestApiScoresAnswersSummaries.nodes[0].answers;
