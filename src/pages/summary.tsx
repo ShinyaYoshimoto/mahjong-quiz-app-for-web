@@ -38,13 +38,13 @@ const SummaryPage = ({ data }: { data: Data }) => {
 
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Summaries</h1>
+      <h1 style={headingStyles}>サマリー</h1>
       <div>
         <ul>
           {answers.map((answer, index) => (
             <li key={index}>
               <p>{answer.isStartPlayer ? "親" : "子"}{answer.symbolCount}符{answer.fanCount}飜{answer.isDraw ? "ツモ" : "ロン"}</p>
-              <p>正: {answer.count.true} / 誤: {answer.count.false}</p>
+              <p>正答率{Math.round(answer.count.true / (answer.count.true + answer.count.false) * 100)}% - 正: {answer.count.true} / 誤: {answer.count.false}</p>
               <br />
             </li>
           ))}
